@@ -6,17 +6,19 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-		"build": "yarn build:tsc",
-		"build:tsc": "tsc -b src",
-		"dev": "yarn build && yarn start",
-		"watch": "tsc -b src -w",
-		"watch:start": "tsc-watch -b src --onSuccess \"yarn start\"",
-		"clean": "node scripts/build/clean.mjs",
-		"start": "node --enable-source-maps dist/index.js",
-		"lint": "eslint --fix --ext ts src",
-		"format": "prettier --write --loglevel=warn \"{src}/**/*.{js,ts,json}\""
+    "build": "yarn build:tsc",
+    "build:tsc": "tsc -b src",
+    "dev": "yarn build && yarn start",
+    "watch": "tsc -b src -w",
+    "watch:start": "tsc-watch -b src --onSuccess \"yarn start\"",
+    "clean": "node scripts/build/clean.mjs",
+    "start": "node --enable-source-maps dist/index.js",
+    "lint": "eslint --fix --ext ts src",
+    "format": "prettier --write --loglevel=warn \"{src}/**/*.{js,ts,json}\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "@sapphire/pieces": "^3.2.0"
+  },
   "devDependencies": {
     "@sapphire/eslint-config": "^4.0.11",
     "@sapphire/prettier-config": "^1.2.9",
@@ -41,5 +43,5 @@
     "url": "https://github.com/ShibuiDAO/nova-reference-relayer/issues"
   },
   "homepage": "https://github.com/ShibuiDAO/nova-reference-relayer#readme",
-	"prettier": "@sapphire/prettier-config"
+  "prettier": "@sapphire/prettier-config"
 }

@@ -14,6 +14,11 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
+"@discordjs/collection@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@discordjs/collection/-/collection-0.3.2.tgz#3c271dd8a93dad89b186d330e24dbceaab58424a"
+  integrity sha512-dMjLl60b2DMqObbH1MQZKePgWhsNe49XkKBZ0W5Acl5uVV43SN414i2QfZwRI7dXAqIn8pEWD2+XXQFn9KWxqg==
+
 "@eslint/eslintrc@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.0.5.tgz#33f1b838dbf1f923bfa517e008362b78ddbbf318"
@@ -77,6 +82,15 @@
     prettier "^2.5.1"
     typescript "^4.5.4"
 
+"@sapphire/pieces@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@sapphire/pieces/-/pieces-3.2.0.tgz#6ce871222d2686b95c12e04b62961897a29bf803"
+  integrity sha512-7V7R2ouluY5XBEN73cjwMuKI8O4RsSSH8VY6xzYxbMKBA+LAGo0nPTMZ/XzEgHDopIrbcYKJMVZHpjKHWhniKA==
+  dependencies:
+    "@discordjs/collection" "^0.3.2"
+    "@sapphire/utilities" "^3.1.0"
+    tslib "^2.3.1"
+
 "@sapphire/prettier-config@^1.2.9":
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/@sapphire/prettier-config/-/prettier-config-1.2.9.tgz#69fe02b3502f67e62473e7dd5e5c2e644f8d07b7"
@@ -91,6 +105,11 @@
   dependencies:
     tslib "^2.3.1"
     typescript "^4.5.4"
+
+"@sapphire/utilities@^3.1.0":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@sapphire/utilities/-/utilities-3.2.1.tgz#dbbffef1daf0fdc29481881aaac940a87341067e"
+  integrity sha512-y00aaBzKNwCIVE2a444zdPvHZmStpbVXE7iRC1NsbF1USXnQtNhgAGxq0PWZkBzHxpD9boKsUNS2Z+XzTXZvvQ==
 
 "@tsconfig/node10@^1.0.7":
   version "1.0.8"
