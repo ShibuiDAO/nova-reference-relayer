@@ -34,10 +34,6 @@ export abstract class Listener<O extends Listener.Options = Listener.Options> ex
 		if (this._listener) {
 			const emitter = this.emitter!;
 
-			// Increment the maximum amount of listeners by one:
-			const maxListeners = emitter.getMaxListeners();
-			if (maxListeners !== 0) emitter.setMaxListeners(maxListeners + 1);
-
 			emitter[this.once ? 'once' : 'on'](this.event as any, this._listener);
 		}
 		return super.onLoad();
@@ -46,10 +42,6 @@ export abstract class Listener<O extends Listener.Options = Listener.Options> ex
 	public onUnload() {
 		if (!this.once && this._listener) {
 			const emitter = this.emitter!;
-
-			// Increment the maximum amount of listeners by one:
-			const maxListeners = emitter.getMaxListeners();
-			if (maxListeners !== 0) emitter.setMaxListeners(maxListeners - 1);
 
 			emitter.off(this.event as any, this._listener);
 			this._listener = null;
