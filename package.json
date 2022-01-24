@@ -17,7 +17,8 @@
     "format": "prettier --write --loglevel=warn \"{src}/**/*.{js,ts,json}\""
   },
   "dependencies": {
-    "@sapphire/pieces": "^3.2.0"
+    "@sapphire/pieces": "^3.2.0",
+    "ethers": "^5.5.3"
   },
   "devDependencies": {
     "@sapphire/eslint-config": "^4.0.11",
