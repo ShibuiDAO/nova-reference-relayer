@@ -15,3 +15,6 @@ const chainIDParser = z
 	.transform((port) => (port === undefined ? undefined : Number(port)));
 export const l1ChainID = chainIDSchema.parse(chainIDParser.parse(process.env.L1_CHAIN_ID));
 export const l2ChainID = chainIDSchema.parse(chainIDParser.parse(process.env.L2_CHAIN_ID));
+
+const addressSchema = z.string();
+export const l2NovaRegistryAddress = addressSchema.parse(process.env.L2_NOVA_REGISTRY_ADDRESS);
