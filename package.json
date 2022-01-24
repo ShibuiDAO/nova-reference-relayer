@@ -6,7 +6,15 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"build": "yarn build:tsc",
+		"build:tsc": "tsc -b src",
+		"dev": "yarn build && yarn start",
+		"watch": "tsc -b src -w",
+		"watch:start": "tsc-watch -b src --onSuccess \"yarn start\"",
+		"clean": "node scripts/build/clean.mjs",
+		"start": "node --enable-source-maps dist/index.js",
+		"lint": "eslint --fix --ext ts src",
+		"format": "prettier --write --loglevel=warn \"{src}/**/*.{js,ts,json}\""
   },
   "dependencies": {},
   "devDependencies": {
